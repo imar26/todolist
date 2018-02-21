@@ -1,0 +1,23 @@
+{
+  "name": "assignment-5-techcrat",
+  "version": "1.0.0",
+  "description": "Created a TODO app using HTML5, CSS3, and JavaScript.",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/neu-mis-info6150-spring-2018/assignment-5-techcrat.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/neu-mis-info6150-spring-2018/assignment-5-techcrat/issues"
+  },
+  "homepage": "https://github.com/neu-mis-info6150-spring-2018/assignment-5-techcrat#readme",
+  "dependencies": {
+    "connect": "^3.6.6",
+    "serve-static": "^1.13.2"
+  }
+}

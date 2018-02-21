@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Assignment 5 - TODO App</title>
+    <meta charset="UTF-8">
+    <link rel="shortcut icon" href="http://techcrat.in/secure_content/wp-content/themes/techcrat-in/img/favicon.png" type="image/x-icon"
+    />
+    <!-- Javascript File -->
+    <script src="javascripts/app.js"></script>
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Courgette" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Asap+Condensed:400,400i,700,700i" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Cambo" rel="stylesheet">
+    <!-- CSS -->
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="css/style.css" />
+</head>
+
+<body>
+    <header id="header" class="clearfix">
+        <nav class="menu">
+            <div class="left-header">
+                <span>TechCrat's Todo List</span>
+            </div>
+            <div class="right-header">
+                <span>
+                    <i class="fa fa-user"></i>Welcome, Aadesh!</span>
+            </div>
+        </nav>
+    </header>
+    <div id="mainContent" class="mainContent">
+        <h1>Welcome to TechCrat's Todo List</h1>
+        <div class="clearfix">
+            <div class="left-section">
+                <h2>List of Todo Items</h2>
+                <div id="todoLists">
+                </div>
+            </div>
+            <div class="right-section">
+                <h2>Add/Update Todo Item</h2>
+                <form method="post" onsubmit="saveTodoList(event)">
+                    <label for="title">
+                        Title <span class="required">*</span>
+                    </label>
+                    <input type="text" id="title" name="title" required="required" />
+                    <label for="todoItem">
+                        Todo Item <span class="required">*</span>
+                    </label>
+                    <textarea id="todoItem" name="todoItem" rows="3" required="required"></textarea>
+                    <label for="author">
+                        Author <span class="required">*</span>
+                    </label>
+                    <select id="author" name="author">
+                        <option value="Aadesh">Aadesh</option>
+                        <option value="Bhumika">Bhumika</option>
+                        <option value="Rohit">Rohit</option>
+                        <option value="Meven">Meven</option>
+                        <option value="Li">Li</option>
+                    </select>
+                    <label for="date">
+                        Date <span class="required">*</span>
+                    </label>
+                    <input type="date" id="date" name="date" required="required" />
+                    <input type="hidden" id="todoId" name="todoId" value="" />
+                    <input type="submit" name="action" value="Add Todo Item" id="addBtn" onclick="clicked='Add'" />
+                    <input type="submit" name="action" value="Update Todo Item" id="updateBtn" onclick="clicked='Update'" />
+                </form>
+            </div>
+        </div>
+    </div>
+    <footer id="footer">
+        <span>
+            Copyright &copy; 2018. All Rights Reserved.
+        </span>
+    </footer>
+</body>
+
+</html>

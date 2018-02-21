@@ -1,0 +1,32 @@
+[
+    {
+        "title": "Cooking",
+        "todoItem": "Cook food for 8 people",
+        "author": "Aadesh",
+        "date": "2018-02-12"
+    },
+    {
+        "title": "Bathing",
+        "todoItem": "Cook food for 8 people",
+        "author": "Bhumika",
+        "date": "2018-02-13"
+    },
+    {
+        "title": "Playing",
+        "todoItem": "Cook food for 8 people",
+        "author": "Aadesh",
+        "date": "2018-02-14"
+    },
+    {
+        "title": "Washing",
+        "todoItem": "Cook food for 8 people",
+        "author": "Bhumika",
+        "date": "2018-02-15"
+    },
+    {
+        "title": "Drinking",
+        "todoItem": "Cook food for 8 people",
+        "author": "Bhumika",
+        "date": "2018-02-16"
+    }
+]
