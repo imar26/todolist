@@ -105,19 +105,19 @@ function displayTodoList(todoList) {
             uElement.appendChild(date);
             divElement.appendChild(uElement);
 
-            // var editElement = document.createElement("button");
-            // editElement.setAttribute("class", "editBtn fa");
-            // editElement.setAttribute("onclick", "updateTodoItem(" + todoList[i]._id + ")");
-            // var editText = document.createTextNode("Edit");
-            // editElement.appendChild(editText);
-            // divElement.appendChild(editElement);
+            var editElement = document.createElement("button");
+            editElement.setAttribute("class", "editBtn fa");
+            editElement.setAttribute("onclick", "updateTodoItem(" + todoList[i]._id + ")");
+            var editText = document.createTextNode("Edit");
+            editElement.appendChild(editText);
+            divElement.appendChild(editElement);
 
-            // var deleteElement = document.createElement("button");
-            // deleteElement.setAttribute("class", "deleteBtn fa");
-            // deleteElement.setAttribute("onclick", "deleteTodoItem(" + todoList[i]._id + ")");
-            // var deleteText = document.createTextNode("Delete");
-            // deleteElement.appendChild(deleteText);
-            // divElement.appendChild(deleteElement);
+            var deleteElement = document.createElement("button");
+            deleteElement.setAttribute("class", "deleteBtn fa");
+            deleteElement.setAttribute("onclick", "deleteTodoItem(" + todoList[i]._id + ")");
+            var deleteText = document.createTextNode("Delete");
+            deleteElement.appendChild(deleteText);
+            divElement.appendChild(deleteElement);
 
             todoListDiv.appendChild(divElement);
         }
