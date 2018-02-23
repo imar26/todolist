@@ -241,14 +241,14 @@ function formatDate(date) {
 
 // Check whether the same data already exists
 function checkObject() {
-    var title = document.getElementById("title").value;
-    var todoItem = document.getElementById("todoItem").value;
+    var title = document.getElementById("title").value.toLowerCase();
+    var todoItem = document.getElementById("todoItem").value.toLowerCase();
     var author = document.getElementById("author").value;
     var date = document.getElementById("date").value;
     var len = todoList.length;
     var flag = true;
     for(var i = 0; i < len; i++){
-        if(todoList[i].title == title.trim() && todoList[i].todoItem == todoItem.trim() && todoList[i].author == author && todoList[i].date == date){
+        if(todoList[i].title.toLowerCase() == title.trim() && todoList[i].todoItem.toLowerCase() == todoItem.trim() && todoList[i].author == author && todoList[i].date == date){
             flag = false;            
         }          
     }
