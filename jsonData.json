@@ -6,26 +6,26 @@
         "date": "2018-02-12"
     },
     {
-        "title": "Bathing",
-        "todoItem": "Cook food for 8 people",
+        "title": "Grocery",
+        "todoItem": "Get Milk and Bread",
         "author": "Bhumika",
         "date": "2018-02-13"
     },
     {
-        "title": "Playing",
-        "todoItem": "Cook food for 8 people",
+        "title": "Cleaning",
+        "todoItem": "Kitchen area and bathtub",
         "author": "Aadesh",
         "date": "2018-02-14"
     },
     {
-        "title": "Washing",
-        "todoItem": "Cook food for 8 people",
+        "title": "Laundry",
+        "todoItem": "Take the bedsheets and curtains",
         "author": "Bhumika",
         "date": "2018-02-15"
     },
     {
-        "title": "Drinking",
-        "todoItem": "Cook food for 8 people",
+        "title": "Bills",
+        "todoItem": "Pay the electricity and Wi-fi bills",
         "author": "Bhumika",
         "date": "2018-02-16"
     }

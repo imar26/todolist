@@ -18,6 +18,7 @@
 </head>
 
 <body>
+    <!-- Header -->
     <header id="header" class="clearfix">
         <nav class="menu">
             <div class="left-header">
@@ -32,14 +33,16 @@
     <div id="mainContent" class="mainContent">
         <h1>Welcome to TechCrat's Todo List</h1>
         <div class="clearfix">
+            <!-- Todo Items List -->
             <div class="left-section">
                 <h2>List of Todo Items</h2>
                 <div id="todoLists">
                 </div>
             </div>
+            <!-- Add/Update Todo Item form -->
             <div class="right-section">
                 <h2>Add/Update Todo Item</h2>
-                <form method="post" onsubmit="saveTodoList(event)">
+                <form method="post" id="todoListForm" onsubmit="saveTodoList(event)">
                     <label for="title">
                         Title <span class="required">*</span>
                     </label>
@@ -69,6 +72,7 @@
             </div>
         </div>
     </div>
+    <!-- Footer -->
     <footer id="footer">
         <span>
             Copyright &copy; 2018. All Rights Reserved.

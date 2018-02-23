@@ -42,7 +42,7 @@ window.onload = function () {
     init();
 };
 
-
+// Gets data from JSON file using AJAX
 function loadJSON(callback) {
     var xobj = new XMLHttpRequest();
     xobj.overrideMimeType("application/json");
@@ -58,6 +58,7 @@ function loadJSON(callback) {
 
 var todoList;
 
+// First function to be called when the page is loaded
 function init() {
     loadJSON(function (response) {
         // Parse JSON string into object
@@ -65,10 +66,12 @@ function init() {
         displayTodoList(todoList);
     });
 
+    // Calculate height
     var windowHeight = window.innerHeight;
     var headerHeight = document.getElementById('header').clientHeight;
     var footerHeight = document.getElementById('footer').clientHeight;
 
+    // Append total height to the window screen
     var totalHeight = windowHeight - headerHeight - footerHeight;
     document.getElementById("mainContent").setAttribute('style', 'min-height: '+totalHeight+'px');
 }
@@ -130,12 +133,16 @@ function displayTodoList(todoList) {
     }
 }
 
+// Function called when the user submits the form
 function saveTodoList(e) {
     // Avoid refreshing the page
     e.preventDefault();
 
+
+    // To call add todo function
     if (clicked == 'Add') {
         addTodoList();
+    // To call update todo function
     } else if (clicked == 'Update') {
         var todoId = document.getElementById("todoId").value;
         if (todoId != '') {
@@ -205,10 +212,12 @@ function addTodoList() {
             successElement.style.display = "none";
         }, 3500);
 
-        document.getElementById("title").value = "";
-        document.getElementById("todoItem").value = "";
-        document.getElementById("author").value = "Aadesh";
-        document.getElementById("date").value = "";
+        // document.getElementById("title").value = "";
+        // document.getElementById("todoItem").value = "";
+        // document.getElementById("author").value = "Aadesh";
+        // document.getElementById("date").value = "";
+
+        document.getElementById("todoListForm").reset();
 
         var todoListDiv = document.getElementById("todoLists");
         while (todoListDiv.hasChildNodes()) {
@@ -218,6 +227,8 @@ function addTodoList() {
         displayTodoList(todoList);
     }
 }
+
+// Format the date that is displayed on the front end
 function formatDate(date) {
     // var d = new Date(date);
     //console.log(Object.values(date));
@@ -226,9 +237,9 @@ function formatDate(date) {
     var m = month[split[1] - 1];
     var dateFormat = m + " " + split[2] + ", " + split[0];
     return dateFormat;
-
-
 }
+
+// Check whether the same data already exists
 function checkObject() {
     var title = document.getElementById("title").value;
     var todoItem = document.getElementById("todoItem").value;
@@ -243,6 +254,8 @@ function checkObject() {
     }
     return flag;  
 }
+
+// Update todo list
 function updateTodoList(todoId) {
     var title = document.getElementById("title").value;
     var todoItem = document.getElementById("todoItem").value;
@@ -261,6 +274,16 @@ function updateTodoList(todoId) {
             errorElement.style.display = "none";
         }, 3500);
         
+    } else if(checkObject() == false) {
+        var errorElement = document.createElement("h4");
+        var errorMessage = document.createTextNode("Todo Item Already Exits!");
+        errorElement.setAttribute("class", "error");
+        errorElement.appendChild(errorMessage);
+        var updateBtn = document.getElementById("updateBtn");
+        updateBtn.parentNode.insertBefore(errorElement, updateBtn.nextSibling);
+        setTimeout(function () {
+            errorElement.style.display = "none";
+        }, 3500);
     } else {
         var len = todoList.length;
 
@@ -281,10 +304,12 @@ function updateTodoList(todoId) {
                     successElement.style.display = "none";
                 }, 3500);
 
-                document.getElementById("title").value = "";
-                document.getElementById("todoItem").value = "";
-                document.getElementById("author").value = "Aadesh";
-                document.getElementById("date").value = "";
+                // document.getElementById("title").value = "";
+                // document.getElementById("todoItem").value = "";
+                // document.getElementById("author").value = "Aadesh";
+                // document.getElementById("date").value = "";
+
+                document.getElementById("todoListForm").reset();                
                 document.getElementById("todoId").value = "";
 
                 var todoListDiv = document.getElementById("todoLists");
@@ -298,6 +323,7 @@ function updateTodoList(todoId) {
     }
 }
 
+// Auto populate data in the form for update
 function updateTodoItem(todoId) {
     var len = todoList.length;
 
@@ -312,6 +338,7 @@ function updateTodoItem(todoId) {
     }
 }
 
+// Delete todo item
 function deleteTodoItem(todoId) {
     var len = todoList.length;
 
