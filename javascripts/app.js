@@ -194,8 +194,8 @@ function addTodoList() {
     } else {
         var newTodoObject = {
             _id: todoId,
-            title: title,
-            todoItem: todoItem,
+            title: title.replace(/\s+/g, " ").trim(),
+            todoItem: todoItem.replace(/\s+/g, " ").trim(),
             author: author,
             date: date
         };
@@ -289,8 +289,8 @@ function updateTodoList(todoId) {
 
         for (var i = 0; i < len; i++) {
             if (todoList[i]._id == todoId) {
-                todoList[i].title = title;
-                todoList[i].todoItem = todoItem;
+                todoList[i].title = title.replace(/\s+/g, " ").trim();
+                todoList[i].todoItem = todoItem.replace(/\s+/g, " ").trim();
                 todoList[i].author = author;
                 todoList[i].date = date;
 
