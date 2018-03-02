@@ -193,7 +193,8 @@ header span {
 }
 
 .mainContent {
-    padding: 10px 10px 30px
+    padding: 10px 10px 30px;
+    box-sizing: border-box;
 }
 
 .mainContent h1 {
